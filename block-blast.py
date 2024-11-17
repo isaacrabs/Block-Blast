@@ -16,13 +16,11 @@ class Grid:
         print("    1   2   3   4   5   6   7   8 ")
 
 
-
-
 class Game:
 
     def __init__(self):
         self.grid = Grid()
-        self.allowedBlocks = {}
+        self.blocks = []
         self.score = 0
         self.possibleMoves = True
 
@@ -35,19 +33,22 @@ class Game:
         self.display_score()
         self.grid.display_grid()
 
-
-
     def game(self):
         self.grid.create_grid()
         while self.possibleMoves:
+            ...
 
 
+class Block:
+
+    def __init__(self, height, width):
+        self.height = height
+        self.width = width
 
 
-
-class Blocks:
-
-    def __init__(self):
-        ...
+def play():
+    newGame = Game()
+    newGame.game()
 
 
+play()
